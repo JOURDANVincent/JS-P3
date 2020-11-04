@@ -87,18 +87,27 @@ let displayAbsoluteValue = function (number) {
 
 //Exercice 15 : Afficher les valeurs absolues de plusieurs nombres.
 let displayAbsoluteValues = function (numbersArray) {
-  const map1 = numbersArray.map(x => Math.abs(x));
-  return map1;
+  return numbersArray.map(Math.abs, numbersArray); 
+
+  //const map = numbersArray.map(x => Math.abs(x));
+  //return map;
+
+  // numbersArray.forEach(element,index){
+  // numbersArray[index]=Math.abs(element);
+  //}
 }
 
 //Exercice 16 : Calculer la surface d'un cercle en fonction de son rayon. L'arondir à l'entier le plus proche.
 let calculateArea = function (radius) {
-  var rep = Math.PI* (radius * radius);
+
+  // let rep = Math.PI* (radius * radius);
+
+  let rep = Math.PI*Math.pow(radius,2)
   return Math.round(rep);
 }
 
 //Exercice 17 : Calculer l'hypothènuse d\'un triangle rectangle. Arrondir à l'entier inférieur.
 let calculateHypotenuse = function (a, b) {
   var rep = Math.hypot(a,b);
-  return Math.round(rep);
+  return Math.floor(rep);
 }
