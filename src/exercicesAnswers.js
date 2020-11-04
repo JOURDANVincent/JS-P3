@@ -75,9 +75,8 @@ let invertSentence = function (sentence) {
 
 //Exercice 13 : Chercher si dans la chaîne de caractère se trouve "La Manu".
 let searchInSentence = function (sentence) {
-  var reponse = sentence.match("La Manu");
+  if(sentence.includes("La Manu"));
   return true;
-  
 }
 
 //Exercice 14 : Afficher la valeur absolue d'un nombre.
